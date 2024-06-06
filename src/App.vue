@@ -1,71 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TheHeader from "./components/TheHeader.vue";
+import TodoList from "./components/TodoList.vue";
+import TheFooter from "./components/TheFooter.vue";
+</script>
 
 <template>
-  <header class="header">
-    <div class="container">
-      <h1 class="header__title">TODOS</h1>
-      <nav class="navPanel">
-        <section class="nav__elements">
-          <button class="nav__button">All</button>
-          <button class="nav__button">Active</button>
-          <button class="nav__button">Done</button>
-        </section>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <section class="content">
-      <div class="container">
-        <div class="todo__item">
-          <div class="todo__item__ok">
-            <i class="fa fa-check" aria-hidden="true"></i>
-          </div>
-          <div class="todo__item__text">Learn the basics of Vue</div>
-          <div class="todo__item__delete">
-            <i class="fa fa-trash" aria-hidden="true"></i>
-          </div>
-        </div>
-        <div class="todo__item">
-          <div class="todo__item__ok">
-            <i class="fa fa-check" aria-hidden="true"></i>
-          </div>
-          <div class="todo__item__text">Learn the basics of Vue</div>
-          <div class="todo__item__delete">
-            <i class="fa fa-trash" aria-hidden="true"></i>
-          </div>
-        </div>
-        <div class="todo__item">
-          <div class="todo__item__ok">
-            <i class="fa fa-check" aria-hidden="true"></i>
-          </div>
-          <div class="todo__item__text">Learn the basics of Vue</div>
-          <div class="todo__item__delete">
-            <i class="fa fa-trash" aria-hidden="true"></i>
-          </div>
-        </div>
-        <div class="add__todos">
-          <div class="add__todos__btn">
-            <i class="fa fa-plus-square-o" aria-hidden="true"></i>
-          </div>
-          <div class="add__form">
-            <div class="add__form__close">
-              <i class="fa fa-times" aria-hidden="true"></i>
-            </div>
-            <input class="add__form__name" type="text" />
-            <button class="add__form__btn">Add task</button>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="container">
-      <p>4 more to do, 0 done</p>
-    </div>
-  </footer>
+  <TheHeader />
+  <TodoList />
+  <TheFooter />
 </template>
 
-<style scoped>
+<style>
 .container {
   width: 350px;
   margin: 0 auto;
@@ -114,12 +59,14 @@
   justify-content: space-around;
   padding: 0.4rem 1rem;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 .todo__item__ok {
   color: greenyellow;
 }
 
-.todo__item__text {
+.todo__item-done {
+  text-decoration: line-through;
 }
 .todo__item__delete {
   color: rgb(213, 216, 216);
