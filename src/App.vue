@@ -51,7 +51,7 @@
             <div class="add__form__close">
               <i class="fa fa-times" aria-hidden="true"></i>
             </div>
-            <div class="add__form__name"></div>
+            <input class="add__form__name" type="text" />
             <button class="add__form__btn">Add task</button>
           </div>
         </div>
@@ -67,14 +67,15 @@
 
 <style scoped>
 .container {
-  width: 300px;
+  width: 350px;
   margin: 0 auto;
 }
 .header {
   text-align: center;
 }
 .header__title {
-  font-size: 3rem;
+  font-size: 2rem;
+  color: red;
 }
 .navPanel {
   display: flex;
@@ -89,6 +90,7 @@
 }
 
 .nav__button {
+  font-size: 1.2rem;
   border-radius: 1rem;
   background-color: #fff;
   border: 2px solid transparent;
@@ -111,35 +113,58 @@
   display: flex;
   justify-content: space-around;
   padding: 0.4rem 1rem;
+  font-size: 1.2rem;
 }
 .todo__item__ok {
+  color: greenyellow;
 }
-.fa {
-}
-.fa-check {
-}
+
 .todo__item__text {
 }
 .todo__item__delete {
+  color: rgb(213, 216, 216);
 }
-.fa-trash {
-}
+
 .add__todos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  color: rgb(141, 142, 142);
 }
 .add__todos__btn {
 }
-.fa-plus-square-o {
-}
+
 .add__form {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
 }
 .add__form__close {
+  display: flex;
+  justify-content: end;
 }
-.fa-times {
-}
+
 .add__form__name {
+  border: 1px solid red;
+  border-radius: 1rem;
+  height: 1.8rem;
+  text-align: center;
 }
+
 .add__form__btn {
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  border: 2px solid red;
+  padding: 0.2rem 0;
+}
+.add__form__btn:hover {
+  transition: 0.3s;
+  background-color: red;
+  color: #fff;
 }
 
 footer {
